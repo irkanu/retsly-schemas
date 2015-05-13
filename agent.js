@@ -13,5 +13,6 @@ module.exports = {
   officeName: {type:'string'},
   email: {type:'string'},
   title: {type:'string'},
+  _office:{type:'string'},
   media: {type:'array', subtype: mediaSchema}
 };

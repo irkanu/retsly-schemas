@@ -12,7 +12,6 @@ module.exports = {
   county: {type:'string'},
   country: {type:'string'},
   zipCode: {type:'string'},
-  _coordinates: {type:'coordinate'},
   coordinates: {type:'array',subtype:'number'},
   listDate: {type:'date'},
   lastModified : {type:'date'},
@@ -37,5 +36,8 @@ module.exports = {
   media: {
     type:'array',
     subtype: mediaSchema
-  }
+  },
+  _office:{type:'string'},
+  _agent:{type:'string'},
+  _coordinates:{type:'coordinate'}
 };
