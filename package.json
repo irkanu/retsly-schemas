@@ -8,9 +8,5 @@
     "url": "https://github.com/retsly/retsly-schemas.git"
   },
   "main": "index.js",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/retsly/retsly-schemas/issues"
-  },
-  "homepage": "https://github.com/retsly/retsly-schemas"
+  "readmeFilename": "README.md"
 }
