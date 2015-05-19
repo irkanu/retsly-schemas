@@ -1,5 +1,6 @@
 var mediaSchema = require('./media');
 var coordinateSchema = require('./coordinate');
+
 module.exports = {
   agentID: {type:'string'},
   officeID: {type:'string'},
