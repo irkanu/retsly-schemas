@@ -1,4 +1,5 @@
 module.exports = {
+  _id: {type:'id'},
   officeID : {type:'string'},
   type: {type:'string'},
   address: {type:'string'},

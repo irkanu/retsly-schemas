@@ -1,8 +1,8 @@
-
 module.exports = {
+  _id: {type:'id'},
   openhouseID: {type:'string'},
   listingID: {type:'string'},
-  date: {type:'string'},
+  date: {type:'date'},
   startTime: {type:'string'},
   endTime: {type:'string'},
   agentID: {type:'string'},
