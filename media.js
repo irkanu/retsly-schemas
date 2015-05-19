@@ -1,5 +1,5 @@
 module.exports = {
-  _id : {type:'id'},
+  mediaID: {type:'string'},
   url: {type:'string'},
   shortDescription: {type:'string'},
   mimeType: {type:'string'},

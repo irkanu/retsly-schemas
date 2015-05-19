@@ -1,7 +1,6 @@
 var mediaSchema = require('./media');
 var coordinateSchema = require('./coordinate');
 module.exports = {
-  _id: {type:'id'},
   agentID: {type:'string'},
   officeID: {type:'string'},
   listingID: {type:'string'},
@@ -14,7 +13,10 @@ module.exports = {
   county: {type:'string'},
   country: {type:'string'},
   zipCode: {type:'string'},
-  coordinates: {type:'array',subtype:'number'},
+  coordinates: {
+    subtype: coordinateSchema,
+    type:'object'
+  },
   listDate: {type:'date'},
   lastModified : {type:'date'},
   importDate:  {type:'date'},
@@ -38,11 +40,5 @@ module.exports = {
   media: {
     type:'array',
     subtype: mediaSchema
-  },
-  _office:{type:'id'},
-  _member:{type:'id'},
-  _coordinates: {
-    subtype: coordinateSchema,
-    type:'object'
   }
 };
