@@ -1,4 +1,4 @@
 module.exports = {
-  type:{type:'string',defautl:'Point'},
-  coordinates:{type:'array',subtype:'number'}
+  type: {type:'string', default:'Point'},
+  coordinates: {type:'array', subtype:'number'}
 };
