@@ -1,3 +1,5 @@
+[![wercker status](https://app.wercker.com/status/bbe67cb1fccdb5275ce19524da28ce43/m "wercker status")](https://app.wercker.com/project/bykey/bbe67cb1fccdb5275ce19524da28ce43)
+
 # retsly-schemas
 
 A module to store our public facing retsly response schemas.
