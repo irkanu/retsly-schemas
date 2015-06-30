@@ -19,17 +19,16 @@ var schemas = [index, agent, media, office, geo, listing, openhouse];
 
 suite('Object Creation')
 test('Check Schemas', function(){
-	for(var i = 0; i < schemas.length; i++){
- 		assert.doesNotThrow(function(){
- 			assert('object' === typeof schemas[i], 'object exists')
- 		})
+	for(var i = 0; i < schemas.length; i++){	// beware for-loops that have function callbacks inside!
+ 		assert('object' === typeof schemas[i], 'object exists')
 	}
 });
 
 test('Parse Contents', function(){
-	schemas.forEach(function(schema){
-		Object.keys(schema).forEach(function(key){
-			assert(schema[key].indexOf != -1, 'content exists') 
+	schemas.forEach(function(schema){		// traverses each element in the schemas array
+		Object.keys(schema).forEach(function(key){		// creates an array of all the enumurable keys for each schema, and traverses them
+			assert(schema[key].indexOf != -1, 'content exists')		// checks each element to see if at has a correctly associated key
 		});
-	})
+	});
 });
+// essentially checks for missing declarations/syntax errors
