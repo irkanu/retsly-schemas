@@ -11,5 +11,8 @@
   "readmeFilename": "README.md",
   "devDependencies": {
     "mocha": "^2.2.5"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/_mocha"
   }
 }

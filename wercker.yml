@@ -2,7 +2,8 @@ box: wercker/nodejs
 build:
   steps:
     - npm-install
-  after-steps:
+    - npm-test
+  after-steps: 
     - hipchat-notify:
         token: $HIPCHAT_TOKEN
         room-id: $HIPCHAT_ROOM

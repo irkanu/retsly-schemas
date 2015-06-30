@@ -4,35 +4,32 @@
 
 var assert = require('assert');
 var index = require('../index.js');
-var testAgent = { id: 'identification', 
- 					  		 	mlsAgentID: 'DB2323',
- 					   			firstName: 'First',
- 					   			lastName: 'Last',
- 					   			middleName: 'Middle',
- 					 				fullName: 'First Middle Last',
- 			  					title: 'Agent',
- 			  					email: 'email@email.com',
- 			  					cellPhone: '7789287234',
- 									homePhone: '6047277272',
- 									office: 'Vancouver',
- 									mlsOfficeID: '123123123',
- 									officePhone: '16042940000',
- 									officeName: 'Office Name',
- 									status: 'Status',
- 									media: [] 
-};  // a mock agent dataset
+var agent = require('../lib/agent.js');
+var media = require('../lib/media.js');
+var office = require('../lib/office.js');
+var geo = require('../lib/geo.js');
+var listing = require('../lib/listing.js');
+var openhouse = require('../lib/openhouse.js');
+
+var schemas = [index, agent, media, office, geo, listing, openhouse];
 
 /**
  * Tests
  */
 
- suite('Index Schema')
-	test('Object Creation', function(){
-		assert('object' == typeof index, 'object exists')
-	});
+suite('Object Creation')
+test('Check Schemas', function(){
+	for(var i = 0; i < schemas.length; i++){
+ 		assert.doesNotThrow(function(){
+ 			assert('object' === typeof schemas[i], 'object exists')
+ 		})
+	}
+});
 
-	test('Internal Objects', function(){
-		index.agent.id = testAgent.id;
-		assert('identification' === index.agent.id)
-	});
-	
+test('Parse Contents', function(){
+	schemas.forEach(function(schema){
+		Object.keys(schema).forEach(function(key){
+			assert(schema[key].indexOf != -1, 'content exists') 
+		});
+	})
+});
