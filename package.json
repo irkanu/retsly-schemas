@@ -8,5 +8,8 @@
     "url": "https://github.com/retsly/retsly-schemas.git"
   },
   "main": "index.js",
-  "readmeFilename": "README.md"
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "mocha": "^2.2.5"
+  }
 }
