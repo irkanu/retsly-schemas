@@ -18,7 +18,7 @@ var types = ['object', 'string', 'date', 'array', 'number', 'boolean']
  * Tests
  */
 
-suite('Object Creation')
+suite('Object Creation');
 test('Check Schemas', function(){
 	for(var i = 0; i < schemas.length; i++){
  		assert('object' === typeof schemas[i], 'object exists');
