@@ -13,7 +13,8 @@ var openhouse = require('../lib/openhouse.js');
 
 var schemas = [index, agent, media, office, geo, listing, openhouse];
 var subschemas = [agent, media, office, geo, listing, openhouse]; 
-var types = ['object', 'string', 'date', 'array', 'number', 'boolean']
+var types = ['object', 'string', 'date', 'array', 'number', 'boolean'];
+var subtypes = ['object', 'string', 'number'];
 /**
  * Tests
  */
@@ -31,6 +32,10 @@ test('Parse Contents', function(){
 		Object.keys(schema).forEach(function(key){	
 			//console.log('second',schema[key]);
 			assert(types.indexOf(schema[key].type) !== -1, 'content exists');
+			if(typeof schema[key].subtype !== 'undefined'){
+				//console.log('sub',typeof schema[key].subtype);
+				assert(subtypes.indexOf(typeof schema[key].subtype) !== -1, 'subtypes valid');
+			} 
 		});
 	});
 });
