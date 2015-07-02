@@ -22,18 +22,15 @@ var subtypes = ['object', 'string', 'number'];
 suite('Object Creation');
 test('Check Schemas', function(){
 	for(var i = 0; i < schemas.length; i++){
- 		assert('object' === typeof schemas[i], 'object exists');
+		assert('object' === typeof schemas[i], 'object exists');
 	}
 });
 
 test('Parse Contents', function(){
 	subschemas.forEach(function(schema){
-		//console.log('first',schema);
 		Object.keys(schema).forEach(function(key){	
-			//console.log('second',schema[key]);
 			assert(types.indexOf(schema[key].type) !== -1, 'content exists');
-			if(typeof schema[key].subtype !== 'undefined'){
-				//console.log('sub',typeof schema[key].subtype);
+			if(schema[key].subtype){
 				assert(subtypes.indexOf(typeof schema[key].subtype) !== -1, 'subtypes valid');
 			} 
 		});
