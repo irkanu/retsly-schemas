@@ -21,18 +21,18 @@ var subtypes = ['object', 'string', 'number'];
 
 suite('Object Creation');
 test('Check Schemas', function(){
-	for(var i = 0; i < schemas.length; i++){
-		assert('object' === typeof schemas[i], 'object exists');
-	}
+  for(var i = 0; i < schemas.length; i++){
+    assert('object' === typeof schemas[i], 'object exists');
+  }
 });
 
 test('Parse Contents', function(){
-	subschemas.forEach(function(schema){
-		Object.keys(schema).forEach(function(key){	
-			assert(types.indexOf(schema[key].type) !== -1, 'content exists');
-			if(schema[key].subtype){
-				assert(subtypes.indexOf(typeof schema[key].subtype) !== -1, 'subtypes valid');
-			} 
-		});
-	});
+  subschemas.forEach(function(schema){
+    Object.keys(schema).forEach(function(key){	
+      assert(types.indexOf(schema[key].type) !== -1, 'content exists');
+      if(schema[key].subtype){
+	assert(subtypes.indexOf(typeof schema[key].subtype) !== -1, 'subtypes valid');
+      } 
+    });
+  });
 });
