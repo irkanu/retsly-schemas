@@ -15,10 +15,10 @@ var schemas = [index, agent, media, office, geo, listing, openhouse];
 var subschemas = [agent, media, office, geo, listing, openhouse]; 
 var types = ['object', 'string', 'date', 'array', 'number', 'boolean'];
 var subtypes = ['object', 'string', 'number'];
+
 /**
  * Tests
  */
-
 suite('Object Creation');
 test('Check Schemas', function(){
   for(var i = 0; i < schemas.length; i++){
