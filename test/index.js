@@ -31,7 +31,7 @@ test('Parse Contents', function(){
     Object.keys(schema).forEach(function(key){	
       assert(types.indexOf(schema[key].type) !== -1, 'content exists');
       if(schema[key].subtype){
-	assert(subtypes.indexOf(typeof schema[key].subtype) !== -1, 'subtypes valid');
+        assert(subtypes.indexOf(typeof schema[key].subtype) !== -1, 'subtypes valid');
       } 
     });
   });
