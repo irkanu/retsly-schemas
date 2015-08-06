@@ -41,7 +41,7 @@ test('Parse Contents', function(){
 test('Check Descriptions', function(){
   subschemas.forEach(function(schema){
     Object.keys(schema).forEach(function(key){
-      assert(schema[key].desc, 'descriptions included');
+      assert(typeof schema[key].desc === 'string', 'descriptions included');
     });
   });
 });
