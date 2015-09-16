@@ -26,6 +26,10 @@ var subtypes = ['object', 'string', 'number'];
 suite('Object Creation');
 
 test('Check Schemas', function(){
+
+  //make sure index is valid
+  require('../index');
+  
   for(var i = 0; i < schemas.length; i++){
     var schema = schemas[i];
     assert('object' === typeof schemas[i], 'object exists');
