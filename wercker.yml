@@ -1,9 +1,24 @@
 box: wercker/nodejs
 build:
   steps:
+
+
+    - script:
+        name: chown for npm
+        code: sudo chown -R $USER /usr/local
+
+    - script:
+        name: install newer npm
+        code: |
+          npm install -g npm@2.14.8
+          echo "node version $(node -v)"
+          echo "npm version $(npm -v)"
+
     - npm-install
+
     - npm-test
-  after-steps: 
+
+  after-steps:
     - hipchat-notify:
         token: $HIPCHAT_TOKEN
         room-id: $HIPCHAT_ROOM
