@@ -9,6 +9,10 @@ var parcel = require('./lib/parcel');
 var assessment = require('./lib/assessment');
 var transaction = require('./lib/transaction');
 
+var application = require('./lib/application');
+
+var user = require('./lib/user');
+
 module.exports = {
   agent: agent,
   office: office,
@@ -18,5 +22,7 @@ module.exports = {
   vendor: vendor,
   parcel: parcel,
   assessment: assessment,
-  transaction: transaction
+  transaction: transaction,
+  application: application,
+  user: user
 };
