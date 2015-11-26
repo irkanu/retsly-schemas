@@ -17,8 +17,9 @@ var transaction = require('../lib/transaction.js');
 var schemas = [agent, media, office, geo, listing,
   openhouse, parcel, assessment, transaction];
 var subschemas = [agent, media, office, geo, listing, openhouse]; 
-var types = ['object', 'string', 'date', 'array', 'number', 'boolean'];
+var types = ['object', 'string', 'array', 'number', 'boolean'];
 var subtypes = ['object', 'string', 'number'];
+var formats = ['date-time'];
 
 /**
  * Tests
@@ -36,7 +37,10 @@ test('Check Schemas', function(){
 
     // Each field has a type
     Object.keys(schema).forEach(function(key){
-      assert(types.indexOf(schema[key].type) !== -1, 'content exists in: ' + schema[key].type);
+      assert(types.indexOf(schema[key].type) !== -1, 'Invalid type for: ' + key);
+      if (schema[key].format) {
+        assert(formats.indexOf(schema[key].format) !== -1, 'Invalid format.');
+      }
     });
   }
 });
