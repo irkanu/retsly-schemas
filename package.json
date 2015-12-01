@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "retsly-schemas",
+  "name": "@retsly/retsly-schemas",
   "description": "Retsly Schemas",
   "version": "1.4.1",
   "repository": {
