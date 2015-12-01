@@ -10,8 +10,9 @@ var assessment = require('./lib/assessment');
 var transaction = require('./lib/transaction');
 
 var application = require('./lib/application');
-
 var user = require('./lib/user');
+
+var zestimate = require('./lib/zestimate');
 
 module.exports = {
   agent: agent,
@@ -24,5 +25,6 @@ module.exports = {
   assessment: assessment,
   transaction: transaction,
   application: application,
-  user: user
+  user: user,
+  zestimate: zestimate
 };
