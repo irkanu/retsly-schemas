@@ -2,7 +2,7 @@
   "private": false,
   "name": "@retsly/retsly-schemas",
   "description": "Retsly Schemas",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/retsly/retsly-schemas.git"
