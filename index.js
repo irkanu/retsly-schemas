@@ -1,6 +1,7 @@
 var agent = require('./lib/agent');
 var office = require('./lib/office');
 var listing = require('./lib/listing');
+var map = require('./lib/map');
 var openhouse = require('./lib/openhouse');
 var media = require('./lib/media');
 var vendor = require('./lib/vendor');
@@ -26,5 +27,6 @@ module.exports = {
   transaction: transaction,
   application: application,
   user: user,
-  zestimate: zestimate
+  zestimate: zestimate,
+  map: map
 };
