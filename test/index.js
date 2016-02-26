@@ -9,13 +9,14 @@ var office = require('../lib/office.js');
 var geo = require('../lib/geo.js');
 var listing = require('../lib/listing.js');
 var openhouse = require('../lib/openhouse.js');
+var map = require('../lib/map.js');
 
 var parcel = require('../lib/parcel.js');
 var assessment = require('../lib/assessment.js');
 var transaction = require('../lib/transaction.js');
 
 var schemas = [agent, media, office, geo, listing,
-  openhouse, parcel, assessment, transaction];
+  openhouse, parcel, assessment, transaction, map];
 var subschemas = [agent, media, office, geo, listing, openhouse]; 
 var types = ['object', 'string', 'array', 'number', 'boolean'];
 var subtypes = ['object', 'string', 'number'];
