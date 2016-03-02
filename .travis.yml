@@ -1,0 +1,25 @@
+language: node_js
+
+node_js:
+  - "4.3.0"
+
+before_install:
+  - npm install -g npm@2.14.8
+  - echo "node version $(node -v)"
+  - echo "npm version $(npm -v)"
+
+install:
+  - npm install
+
+script:
+  - npm-test
+
+notifications:
+  email: false
+  hipchat:
+    rooms:
+      secure: "CK+fNGAnvAli/86DTFR+8i7pPePHKha1xN4zhya+NvoBRKtsUpZOAdDbY6AgO1zeYDu+gqJsuXgBQQ/tUTGVXbn4PxteiB4jCmNwrSBY717X4UAZ2viwJJZpf04iGnOjpVAxXZSZqqkuMvOtrs+nB8neREwHRxF+OAaJro8lcMavNkbuEjz/bS5UdRVrL08rlPQGagu3X+5/NqvQRfBw8Qq9Fxms6CL8YJXHujI8SCn/XRoNwSECXukgtjQZR7+8ahfIClzqV/NX6tplv2MRJ+8VSjkXpZ7hMXf5SCuVUuYCN02Db9DqBXIsI1j+nMNMt9gONytw1bxJn9mAp3pW7+AZcpbeRwxFeNzDU+nBWf7wFgj5qUMqMqQ3OH5/7bCV/6cW53OLxBU/7Pwd2uEZ5Ee4XDnpK6DB0wM4jOpPfSvGtO6dFguW2G82AXy/J+4EZ0P5UZXVR2c03e/TaqCtJQYYcuBcw8PUUmEFXb4gO1N94j+4qnEdGh8Takmbk6df08uyxRjFggbJuuLYjW8kdEDAA1nv3I4TDNerr34P+N+UtERWr+mZHnbTQtce96SHCkxoINZvDbrSI5RniQN5kbKbxxBkjNQEzPkBVDEyzyUuCDia3K6rwkb2kqdzTf6WzysO6pG1Od3gkbZmQqp0YHrthF/A1kpjQFQWNLriVxo="
+    template:
+    - '%{repository}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}
+      (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Change view</a>)'
+    format: html

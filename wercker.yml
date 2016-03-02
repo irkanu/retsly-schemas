@@ -2,7 +2,6 @@ box: wercker/nodejs
 build:
   steps:
 
-
     - script:
         name: chown for npm
         code: sudo chown -R $USER /usr/local
