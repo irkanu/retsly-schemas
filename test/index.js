@@ -17,7 +17,7 @@ var transaction = require('../lib/transaction.js');
 
 var schemas = [agent, media, office, geo, listing,
   openhouse, parcel, assessment, transaction, map];
-var subschemas = [agent, media, office, geo, listing, openhouse]; 
+var subschemas = [agent, media, office, geo, listing, openhouse];
 var types = ['object', 'string', 'array', 'number', 'boolean'];
 var subtypes = ['object', 'string', 'number'];
 var formats = ['date-time'];
@@ -31,7 +31,7 @@ test('Check Schemas', function(){
 
   //make sure index is valid
   require('../index');
-  
+
   for(var i = 0; i < schemas.length; i++){
     var schema = schemas[i];
     assert('object' === typeof schemas[i], 'object exists');
@@ -60,7 +60,7 @@ test('Parse Contents', function(){
 test('Check Descriptions', function(){
   subschemas.forEach(function(schema){
     Object.keys(schema).forEach(function(key){
-      assert(typeof schema[key].desc === 'string', 'descriptions included');
+      assert(typeof schema[key].desc === 'string', 'description included for '+key);
     });
   });
 });
