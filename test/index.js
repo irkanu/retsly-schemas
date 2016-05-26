@@ -57,10 +57,17 @@ test('Parse Contents', function(){
   });
 });
 
-test('Check Descriptions', function(){
+test('Check Descriptions and subtypes', function(){
   subschemas.forEach(function(schema){
     Object.keys(schema).forEach(function(key){
       assert(typeof schema[key].desc === 'string', 'description included for '+key);
+
+      // Asserts array fields have subtypes
+      if (schema[key].type === 'array') {
+        if (typeof schema[key].subtype !== 'object') {
+          assert(subtypes.indexOf(schema[key].subtype) !== -1, key + ' needs subtype.');
+        }
+      }
     });
   });
 });
