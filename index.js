@@ -17,8 +17,10 @@ var zestimate = require('./lib/zestimate');
 
 module.exports = {
   agent: agent,
+  member: agent,
   office: office,
   listing: listing,
+  property: listing,
   openhouse: openhouse,
   media: media,
   vendor: vendor,
